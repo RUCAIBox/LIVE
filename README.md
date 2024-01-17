@@ -20,7 +20,7 @@ class LiveModel(nn.Module):
 
         # self.model = BartForConditionalGeneration.from_pretrained('RUCAIBox/live-bart-base', image_fusion_encoder=True)
         # choose one
-        # self.model = T5ForConditionalGeneration.from_pretrained('RUCAIBox/live-T5-base', image_fusion_encoder=True)
+        # self.model = T5ForConditionalGeneration.from_pretrained('RUCAIBox/live-t5-base', image_fusion_encoder=True)
         self.vision_model = AutoModel.from_pretrained('openai/clip-vit-base-patch32').vision_model
         hidden_size = self.model.config.hidden_size
         self.trans = nn.Sequential(
